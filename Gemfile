@@ -11,6 +11,13 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'spring',        group: :development
 
+gem 'thin'
+
+group :development, :test do
+  gem 'pry'
+end
+
 group :test do
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
