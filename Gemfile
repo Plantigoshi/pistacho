@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 gem 'rails', '4.1.1'
 
@@ -20,4 +21,8 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
