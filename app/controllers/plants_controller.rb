@@ -1,5 +1,6 @@
 class PlantsController < ApplicationController
   before_filter :get_plant, only: :sync
+  protect_from_forgery except: :sync
 
   def index
     plant = Plant.first
