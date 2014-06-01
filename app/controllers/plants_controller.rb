@@ -10,7 +10,10 @@ class PlantsController < ApplicationController
   def sync
     @plant.metrics << Temperature.new(measure: params['data']['Temp'])
     @plant.metrics << Humidity.new(measure: params['data']['Hum'])
-    binding.pry
+    @plant.metrics << SolarVolt.new(measure: params['data']['SolarVolt'])
+    @plant.metrics << Precipitation.new(measure: params['data']['Rain'])
+    @plant.metrics << Light.new(measure: params['data']['Light'])
+
     render nothing: true
   end
 
