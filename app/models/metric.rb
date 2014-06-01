@@ -1,3 +1,5 @@
 class Metric < ActiveRecord::Base
-  validates :name, :measure, presence: true
+  belongs_to :plant
+
+  validates :type, :measure, presence: true
 end
