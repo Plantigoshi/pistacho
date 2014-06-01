@@ -1,0 +1,2 @@
+class SolarVolt < Metric
+end
