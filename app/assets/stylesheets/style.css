@@ -635,7 +635,7 @@ fieldset#body {
 .temp{
   display:inline-block;
 }
-.temp figure{
+.temp figure .date{
   font-size:1.2em;
   color: #FFF;
   text-align:center;
