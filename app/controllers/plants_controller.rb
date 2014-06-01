@@ -1,10 +1,15 @@
 class PlantsController < ApplicationController
-  before_filter :get_plant, only: :sync
-  protect_from_forgery except: :sync
+  before_filter :get_plant, except: :index
+  protect_from_forgery except: [:sync, :water]
 
   def index
     plant = Plant.first
     redirect_to plant_path plant
+  end
+
+  def water
+    @plant.update_columns water: :true
+    render nothing: true
   end
 
   def sync
@@ -18,6 +23,13 @@ class PlantsController < ApplicationController
     @plant.save!
 
     render nothing: true
+  end
+
+
+  def sync_water
+    plant_state = @plant.water
+    @plant.update_columns water: false
+    render json: plant_state
   end
 
   private

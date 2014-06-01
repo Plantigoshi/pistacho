@@ -6,6 +6,9 @@
     <div class="profile_picture_name">
       <h2>Plantagoshi</h2>
       <p>Ruda, sembrada en Abril 14/2014</p>
+      <div class="button">
+        <a href="#" id="water_btn">Regar</a>
+      </div>
     </div>
   </div>
    <div class="articles_list">
@@ -40,14 +43,13 @@
         <p><a href="#">year</a></p>
         <div class="clear"></div>
       </div>
-      <ul>
-        <li><a href="#"><span class="day_name">Apr</span> 2013
-        <label class="digits"><span>+</span>21<em>%</em></label><div class="clear"></div></a></li>
-        <li class="active"><a href="#"><span class="day_name">May</span> 2013
-        <label class="digits"><span>+</span>48<em>%</em></label><div class="clear"></div></a></li>
-        <li><a href="#"><span class="day_name">Jun</span> 2013
-        <label class="digits"><span>+</span>35<em>%</em> </label><div class="clear"></div></a></li>
-      </ul>
+      <div class="profile_picture_name">
+        <p>Frecuencia de Riego: 2 veces por semana ( cada 3 dias aprox)</p>
+        <p>Humedad Recomendada : 75% - %50%</p>
+        <p>Temperatura : ¡Cuidado a Bajas Temperaturas! A temperaturas menores de 10ºC la planta puede sufrir daños</p>
+        <p>Poda : Aproximadamente una vez al año</p>
+        <p>Cosecha : Aproximadamente un año despues de la siembra</p>
+      </div>
     </div>
   </div>
 </div>
@@ -124,4 +126,6 @@
     </div>
   </div>
 </div>
+
+<div id="plant_id" data-id='<%= @plant.id %>'></div>
 
