@@ -6,5 +6,12 @@ class Plant < ActiveRecord::Base
 
   validates :name, :planted_at, presence: true
 
+  def last_humidity
+    humidities.last.try(:measure)
+  end
+
+  def last_temperature
+    temperatures.last.try(:measure)
+  end
 end
 

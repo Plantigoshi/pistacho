@@ -11,14 +11,13 @@ describe PlantsController do
       }.to change{ Metric.count }.by(2)
     end
 
-    context "sensor variables values" do
+    context "last sensor values" do
       before do
         post :sync, id: plant.id, data: sensor_data
       end
 
-      it "saves humidity data" do
-        plant.humidities.first.measure.should == 60.5
-      end
+      its(:last_humidity)    { should == 60.5 } 
+      its(:last_temperature) { should == 28.6 }
     end
   end
 end
