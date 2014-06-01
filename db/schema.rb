@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140601150744) do
+ActiveRecord::Schema.define(version: 20140601161342) do
 
   create_table "metrics", force: true do |t|
     t.float    "measure"
@@ -29,8 +29,9 @@ ActiveRecord::Schema.define(version: 20140601150744) do
     t.date     "planted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "happy"
     t.boolean  "water",      default: false
+    t.boolean  "happy"
+    t.boolean  "heat",       default: false
   end
 
 end
