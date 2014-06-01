@@ -8,9 +8,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 
-gem 'spring',        group: :development
-
-gem 'thin'
+gem 'spring', group: :development
+gem 'thin', require: false
 
 group :development, :test do
   gem 'pry'
@@ -27,3 +26,4 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
+
