@@ -16,8 +16,11 @@ describe PlantsController do
         post :sync, id: plant.id, data: sensor_data
       end
 
-      its(:last_humidity)    { should == 60.5 } 
-      its(:last_temperature) { should == 28.6 }
+      its(:last_humidity)      { should == 60.5 } 
+      its(:last_temperature)   { should == 28.6 }
+      its(:last_solat_volt)    { should == 28.6 }
+      its(:last_precipitation) { should == 1 }
+      its(:last_light)         { should == 1 }
     end
   end
 end
