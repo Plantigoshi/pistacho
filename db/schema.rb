@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20140601150744) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "happy"
+    t.boolean  "water",      default: false
   end
 
 end
