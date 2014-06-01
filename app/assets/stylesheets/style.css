@@ -1185,3 +1185,7 @@ em.temperature{
   width: 40px;
   height: 40px;
 }
+#temp_btn{
+  margin-top: 5px;
+  background: #e64c65;
+}

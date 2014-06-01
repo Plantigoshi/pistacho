@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
   before_filter :get_plant, except: :index
-  protect_from_forgery except: [:sync, :water]
+  protect_from_forgery except: [:sync, :water, :heat]
 
   def index
     plant = Plant.first
@@ -9,6 +9,11 @@ class PlantsController < ApplicationController
 
   def water
     @plant.update_columns water: :true
+    render nothing: true
+  end
+
+  def heat
+    @plant.update_columns heat: :true
     render nothing: true
   end
 
@@ -30,6 +35,12 @@ class PlantsController < ApplicationController
     plant_state = @plant.water
     @plant.update_columns water: false
     render json: plant_state
+  end
+
+  def sync_heat
+    plant_heat = @plant.heat
+    @plant.update_columns heat: false
+    render json: plant_heat
   end
 
   private
