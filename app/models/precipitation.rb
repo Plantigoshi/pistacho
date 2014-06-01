@@ -1,0 +1,2 @@
+class Precipitation < Metric
+end
