@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140601034532) do
+ActiveRecord::Schema.define(version: 20140601063111) do
 
   create_table "metrics", force: true do |t|
-    t.string   "name"
     t.float    "measure"
     t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "plant_id"
   end
 
   add_index "metrics", ["type"], name: "index_metrics_on_type"
