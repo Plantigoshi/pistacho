@@ -35,7 +35,7 @@ img{max-width:100%;}
 body{
 	font-family: 'ambleregular';
 	background:#1f253d;
-	margin:100px 0;
+	margin:10px 0;
 }
 .wrap{
 	width:80%;
@@ -382,8 +382,9 @@ fieldset#body {
 	-o-border-radius: 0px 0px 5px 5px;
 }
 .week-month-year{
+	padding-top: 70px;
 	text-align:center;
-	margin-bottom:20px;
+	margin-bottom:50px;
 }
 .week-month-year p{
 	display:inline-block;
@@ -1169,4 +1170,7 @@ fieldset#body {
 	.chart h4{
 		right: 4.4em;
    }
+}
+.profile_logo{
+	max-width: 98%;
 }
