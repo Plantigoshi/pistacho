@@ -2,6 +2,8 @@ class PlantsController < ApplicationController
   before_filter :get_plant, only: :sync
 
   def index
+    plant = Plant.first
+    redirect_to plant_path plant
   end
 
   def sync
