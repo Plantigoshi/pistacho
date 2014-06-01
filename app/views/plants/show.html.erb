@@ -15,15 +15,15 @@
       <ul>
         <li><a href="#" class="red">
           <p>Humedad</p>
-          <p class="percentage">21<em>%</em></p></a>
+          <p class="percentage"><%= @plant.last_humidity %><em>%</em></p></a>
         </li>
         <li><a href="#" class="purple">
           <p>Temperatura</p>
-          <p class="percentage">21<em>%</em></p></a>
+          <p class="percentage"><%= @plant.last_temperature %><em class="temperature"> o</em></p></a>
         </li>
         <li><a href="#" class="yellow">
           <p>Precipitación</p>
-          <p class="percentage">21<em>%</em></p></a>
+          <p class="percentage"><%= @plant.last_precipitation %></p></a>
         </li>
         <div class="clear"></div>
       </ul>

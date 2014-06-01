@@ -1175,3 +1175,8 @@ fieldset#body {
 .profile_logo{
   max-width: 98%;
 }
+
+em.temperature{
+  font-size:0.5em;
+  vertical-align:top;
+}
