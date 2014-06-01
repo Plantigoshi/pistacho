@@ -1,11 +1,14 @@
 class PlantsController < ApplicationController
-  before_filter :get_plant, only: :index
+  before_filter :get_plant, only: :sync
 
   def index
   end
 
   def sync
-    render text: 'oki doki'
+    @plant.metrics << Temperature.new(measure: params['data']['Temp'])
+    @plant.metrics << Humidity.new(measure: params['data']['Hum'])
+
+    render nothing: true
   end
 
   private
@@ -14,3 +17,4 @@ class PlantsController < ApplicationController
     @plant = Plant.find params[:id]
   end
 end
+
