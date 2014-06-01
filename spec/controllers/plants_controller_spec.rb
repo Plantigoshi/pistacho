@@ -13,6 +13,7 @@ describe PlantsController do
 
     context "last sensor values" do
       subject { plant }
+
       before do
         post :sync, id: plant.id, data: sensor_data
       end

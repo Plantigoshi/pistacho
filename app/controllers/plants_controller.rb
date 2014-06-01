@@ -14,8 +14,8 @@ class PlantsController < ApplicationController
     @plant.metrics << Precipitation.new(measure: params['data']['Rain'])
     @plant.metrics << Light.new(measure: params['data']['Light'])
 
-    @plant.happy = params['data']['Status']
-    @plant.save!
+    @plant.update_attribute(:happy, params['data']['Status'])
+
 
     render nothing: true
   end
