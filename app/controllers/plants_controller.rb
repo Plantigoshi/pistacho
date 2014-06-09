@@ -26,10 +26,8 @@ class PlantsController < ApplicationController
 
     @plant.update_attribute(:happy, params['data']['Status'])
 
-
     render nothing: true
   end
-
 
   def sync_water
     plant_state = @plant.water
