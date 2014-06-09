@@ -8,12 +8,12 @@ class PlantsController < ApplicationController
   end
 
   def water
-    @plant.update_columns water: :true
+    @plant.update_attribute(:water, true)
     render nothing: true
   end
 
   def heat
-    @plant.update_columns heat: :true
+    @plant.update_attribute(:heat, true)
     render nothing: true
   end
 
@@ -25,19 +25,18 @@ class PlantsController < ApplicationController
     @plant.metrics << Light.new(measure: params['data']['Light'])
 
     @plant.update_attribute(:happy, params['data']['Status'])
-
     render nothing: true
   end
 
   def sync_water
     plant_state = @plant.water
-    @plant.update_columns water: false
+    @plant.update_attribute(:water, false)
     render json: plant_state
   end
 
   def sync_heat
     plant_heat = @plant.heat
-    @plant.update_columns heat: false
+    @plant.update_attribute(:heat, false)
     render json: plant_heat
   end
 
